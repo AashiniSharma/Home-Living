@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="qgl-4i-lhs">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Home&Living-->
+        <scene sceneID="4pc-if-RfZ">
+            <objects>
+                <viewController id="634-0M-H95" customClass="Home_LivingVC" customModule="Home_Living" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="g8C-2a-V8S"/>
+                        <viewControllerLayoutGuide type="bottom" id="PdR-LC-9ba"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="CXj-jR-0b5">
+                        <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="QhP-jj-OVz">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                                <color key="backgroundColor" red="1" green="0.99866439672314733" blue="0.77003466978189428" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="PdR-LC-9ba" firstAttribute="top" secondItem="QhP-jj-OVz" secondAttribute="bottom" id="6np-po-bez"/>
+                            <constraint firstItem="QhP-jj-OVz" firstAttribute="top" secondItem="g8C-2a-V8S" secondAttribute="bottom" id="9Bf-bw-6bF"/>
+                            <constraint firstItem="QhP-jj-OVz" firstAttribute="leading" secondItem="CXj-jR-0b5" secondAttribute="leading" id="IJs-db-um0"/>
+                            <constraint firstAttribute="trailing" secondItem="QhP-jj-OVz" secondAttribute="trailing" id="ND4-D3-dWi"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Home&amp;Living" id="8DQ-Vz-c1K">
+                        <barButtonItem key="rightBarButtonItem" id="N2X-z7-V9r">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="zKG-Uh-WfH">
+                                <rect key="frame" x="276" y="7" width="83" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Favs">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="home_LivingOutlet" destination="QhP-jj-OVz" id="HpK-7i-9Mm"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YBk-bR-IuL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1056.8" y="-37.331334332833585"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="qxA-Ie-giH">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="qgl-4i-lhs" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" translucent="NO" id="IYw-KL-JRk">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.67857741859999998" green="1" blue="0.58830432420000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="634-0M-H95" kind="relationship" relationship="rootViewController" id="Lc7-35-9YP"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Hby-SO-2Mf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="117.59999999999999" y="-37.331334332833585"/>
+        </scene>
+    </scenes>
+</document>
