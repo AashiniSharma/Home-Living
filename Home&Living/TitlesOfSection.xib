@@ -23,7 +23,6 @@
                     <nil key="highlightedColor"/>
                 </label>
             </subviews>
-            <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
             <accessibility key="accessibilityConfiguration" identifier="TitlesOfSectionID"/>
             <constraints>
                 <constraint firstAttribute="bottom" secondItem="okV-7v-o5R" secondAttribute="bottom" id="NaX-h0-xVS"/>

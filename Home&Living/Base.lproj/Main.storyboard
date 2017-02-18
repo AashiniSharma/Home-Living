@@ -12,7 +12,7 @@
         <!--Home&Living-->
         <scene sceneID="4pc-if-RfZ">
             <objects>
-                <viewController id="634-0M-H95" customClass="Home_LivingVC" customModule="Home_Living" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalTransitionStyle="crossDissolve" id="634-0M-H95" customClass="Home_LivingVC" customModule="Home_Living" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="g8C-2a-V8S"/>
                         <viewControllerLayoutGuide type="bottom" id="PdR-LC-9ba"/>
@@ -53,12 +53,44 @@
             </objects>
             <point key="canvasLocation" x="1056.8" y="-37.331334332833585"/>
         </scene>
+        <!--Popup ImageVC-->
+        <scene sceneID="27a-60-Iq6">
+            <objects>
+                <viewController storyboardIdentifier="PopupImageVCID" modalTransitionStyle="crossDissolve" id="vaL-LV-huk" customClass="PopupImageVC" customModule="Home_Living" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="RLe-zg-EkZ"/>
+                        <viewControllerLayoutGuide type="bottom" id="QtH-5h-18D"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="mvc-ud-XgD">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="8V6-k5-dA4">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="8V6-k5-dA4" firstAttribute="leading" secondItem="mvc-ud-XgD" secondAttribute="leading" id="fUx-kX-ONQ"/>
+                            <constraint firstAttribute="trailing" secondItem="8V6-k5-dA4" secondAttribute="trailing" id="iFk-to-zgN"/>
+                            <constraint firstItem="8V6-k5-dA4" firstAttribute="top" secondItem="RLe-zg-EkZ" secondAttribute="bottom" id="pxF-YS-Ohj"/>
+                            <constraint firstItem="QtH-5h-18D" firstAttribute="top" secondItem="8V6-k5-dA4" secondAttribute="bottom" id="xTs-b2-ee3"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="popUpImagesOutlet" destination="8V6-k5-dA4" id="KZN-Ic-gkk"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fxF-gX-FPi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1858" y="-37"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="qxA-Ie-giH">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="qgl-4i-lhs" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" translucent="NO" id="IYw-KL-JRk">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="IYw-KL-JRk">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="barTintColor" red="0.67857741859999998" green="1" blue="0.58830432420000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

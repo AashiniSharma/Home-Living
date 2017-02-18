@@ -12,13 +12,15 @@
 		0C488CCB1E557DD600DC7EB1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0C488CCA1E557DD600DC7EB1 /* Assets.xcassets */; };
 		0C488CCE1E557DD600DC7EB1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0C488CCC1E557DD600DC7EB1 /* LaunchScreen.storyboard */; };
 		0C488CD61E557EDC00DC7EB1 /* Home&LivingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C488CD51E557EDC00DC7EB1 /* Home&LivingVC.swift */; };
-		0C488CD91E55894B00DC7EB1 /* SectionsforHome_Living.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C488CD71E55894B00DC7EB1 /* SectionsforHome_Living.swift */; };
 		0C488CDA1E55894B00DC7EB1 /* SectionsforHome&Living.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C488CD81E55894B00DC7EB1 /* SectionsforHome&Living.xib */; };
 		0C488CE11E55918700DC7EB1 /* VarietiesofHome_Living.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C488CDF1E55918700DC7EB1 /* VarietiesofHome_Living.swift */; };
 		0C488CE21E55918700DC7EB1 /* VarietiesofHome_Living.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C488CE01E55918700DC7EB1 /* VarietiesofHome_Living.xib */; };
 		0C488CE41E55A8BD00DC7EB1 /* TitlesOfSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C488CE31E55A8BD00DC7EB1 /* TitlesOfSection.swift */; };
 		0C488CE61E55A8E300DC7EB1 /* TitlesOfSection.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C488CE51E55A8E300DC7EB1 /* TitlesOfSection.xib */; };
 		0C488CE81E55B6C300DC7EB1 /* JsonData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C488CE71E55B6C300DC7EB1 /* JsonData.swift */; };
+		0CBB6DE61E58083E008B1B36 /* genericFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CBB6DE51E58083E008B1B36 /* genericFunctions.swift */; };
+		0CBB6DEA1E582481008B1B36 /* PopupImageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CBB6DE91E582481008B1B36 /* PopupImageVC.swift */; };
+		0CBB6DEC1E58515E008B1B36 /* SectionsforHome_Living.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CBB6DEB1E58515E008B1B36 /* SectionsforHome_Living.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,13 +31,15 @@
 		0C488CCD1E557DD600DC7EB1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0C488CCF1E557DD600DC7EB1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0C488CD51E557EDC00DC7EB1 /* Home&LivingVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Home&LivingVC.swift"; sourceTree = "<group>"; };
-		0C488CD71E55894B00DC7EB1 /* SectionsforHome_Living.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SectionsforHome_Living.swift; sourceTree = "<group>"; };
 		0C488CD81E55894B00DC7EB1 /* SectionsforHome&Living.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = "SectionsforHome&Living.xib"; sourceTree = "<group>"; };
 		0C488CDF1E55918700DC7EB1 /* VarietiesofHome_Living.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VarietiesofHome_Living.swift; sourceTree = "<group>"; };
 		0C488CE01E55918700DC7EB1 /* VarietiesofHome_Living.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VarietiesofHome_Living.xib; sourceTree = "<group>"; };
 		0C488CE31E55A8BD00DC7EB1 /* TitlesOfSection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TitlesOfSection.swift; sourceTree = "<group>"; };
 		0C488CE51E55A8E300DC7EB1 /* TitlesOfSection.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TitlesOfSection.xib; sourceTree = "<group>"; };
 		0C488CE71E55B6C300DC7EB1 /* JsonData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JsonData.swift; sourceTree = "<group>"; };
+		0CBB6DE51E58083E008B1B36 /* genericFunctions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = genericFunctions.swift; sourceTree = "<group>"; };
+		0CBB6DE91E582481008B1B36 /* PopupImageVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopupImageVC.swift; sourceTree = "<group>"; };
+		0CBB6DEB1E58515E008B1B36 /* SectionsforHome_Living.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SectionsforHome_Living.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,14 +74,16 @@
 			children = (
 				0C488CC31E557DD600DC7EB1 /* AppDelegate.swift */,
 				0C488CD51E557EDC00DC7EB1 /* Home&LivingVC.swift */,
-				0C488CE71E55B6C300DC7EB1 /* JsonData.swift */,
+				0CBB6DE91E582481008B1B36 /* PopupImageVC.swift */,
+				0C488CC71E557DD600DC7EB1 /* Main.storyboard */,
 				0C488CDF1E55918700DC7EB1 /* VarietiesofHome_Living.swift */,
 				0C488CE01E55918700DC7EB1 /* VarietiesofHome_Living.xib */,
-				0C488CD71E55894B00DC7EB1 /* SectionsforHome_Living.swift */,
+				0CBB6DEB1E58515E008B1B36 /* SectionsforHome_Living.swift */,
 				0C488CD81E55894B00DC7EB1 /* SectionsforHome&Living.xib */,
 				0C488CE31E55A8BD00DC7EB1 /* TitlesOfSection.swift */,
 				0C488CE51E55A8E300DC7EB1 /* TitlesOfSection.xib */,
-				0C488CC71E557DD600DC7EB1 /* Main.storyboard */,
+				0C488CE71E55B6C300DC7EB1 /* JsonData.swift */,
+				0CBB6DE51E58083E008B1B36 /* genericFunctions.swift */,
 				0C488CCA1E557DD600DC7EB1 /* Assets.xcassets */,
 				0C488CCC1E557DD600DC7EB1 /* LaunchScreen.storyboard */,
 				0C488CCF1E557DD600DC7EB1 /* Info.plist */,
@@ -162,10 +168,12 @@
 			files = (
 				0C488CC41E557DD600DC7EB1 /* AppDelegate.swift in Sources */,
 				0C488CE11E55918700DC7EB1 /* VarietiesofHome_Living.swift in Sources */,
-				0C488CD91E55894B00DC7EB1 /* SectionsforHome_Living.swift in Sources */,
 				0C488CE81E55B6C300DC7EB1 /* JsonData.swift in Sources */,
 				0C488CE41E55A8BD00DC7EB1 /* TitlesOfSection.swift in Sources */,
+				0CBB6DEA1E582481008B1B36 /* PopupImageVC.swift in Sources */,
 				0C488CD61E557EDC00DC7EB1 /* Home&LivingVC.swift in Sources */,
+				0CBB6DE61E58083E008B1B36 /* genericFunctions.swift in Sources */,
+				0CBB6DEC1E58515E008B1B36 /* SectionsforHome_Living.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -327,6 +335,7 @@
 				0C488CD41E557DD600DC7EB1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

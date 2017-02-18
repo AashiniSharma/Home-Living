@@ -12,15 +12,12 @@ class VarietiesofHome_Living: UICollectionViewCell {
 
     @IBOutlet weak var favouritesButtonOutlet: UIButton!
     @IBOutlet weak var brandVarietiesImages: UIImageView!
+    
+    
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
     }
 
-    @IBAction func favouritesButtonAction(_ sender: UIButton) {
-        
-        favouritesButtonOutlet.isSelected = !favouritesButtonOutlet.isSelected
-        
-    }
-      
 }

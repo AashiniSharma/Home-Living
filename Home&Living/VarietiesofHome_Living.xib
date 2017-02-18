@@ -40,9 +40,6 @@
                         <state key="selected" title="😍">
                             <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         </state>
-                        <connections>
-                            <action selector="favouritesButtonAction:" destination="gTV-IL-0wX" eventType="touchUpInside" id="bdR-fR-smQ"/>
-                        </connections>
                     </button>
                 </subviews>
             </view>
