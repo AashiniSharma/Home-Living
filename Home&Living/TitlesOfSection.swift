@@ -10,5 +10,8 @@ import UIKit
 
 class TitlesOfSection: UITableViewHeaderFooterView {
 
+    @IBOutlet weak var maskingSectionButtonOutlet: UIButton!
     
 }
+
+

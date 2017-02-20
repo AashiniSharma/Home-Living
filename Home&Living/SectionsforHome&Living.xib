@@ -39,17 +39,17 @@
                         </collectionViewFlowLayout>
                     </collectionView>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fo6-2W-WhR">
-                        <rect key="frame" x="345" y="0.0" width="30" height="30"/>
+                        <rect key="frame" x="316" y="0.0" width="59" height="30"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="width" constant="30" id="Cts-3w-uY0"/>
+                            <constraint firstAttribute="width" constant="59" id="Cts-3w-uY0"/>
                         </constraints>
                         <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                        <state key="normal" title="-">
+                        <state key="normal" title="Mask">
                             <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                             <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         </state>
-                        <state key="selected" title="+">
+                        <state key="selected" title="Unmask">
                             <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                             <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         </state>
@@ -73,7 +73,7 @@
             </constraints>
             <connections>
                 <outlet property="brandsLabel" destination="oQh-A4-tl9" id="mFG-fD-gBx"/>
-                <outlet property="collectionofBrands" destination="X1V-k9-GVK" id="eII-C7-8fN"/>
+                <outlet property="home_LivingCollectionView" destination="X1V-k9-GVK" id="A8o-Ao-fxL"/>
                 <outlet property="maskButtonOutlet" destination="fo6-2W-WhR" id="THd-sN-U4x"/>
             </connections>
             <point key="canvasLocation" x="24.5" y="96"/>

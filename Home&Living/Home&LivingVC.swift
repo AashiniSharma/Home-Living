@@ -5,13 +5,13 @@ class Home_LivingVC: UIViewController {
   
     
     //MARK: Properties
-    var favouritesArray = [[IndexPath]]()
-    
-    var hiddinElements = [IndexPath]()
+    var favouritesIndicesArray = [[IndexPath]]() //2D array for storing indexpaths of table view and collection view
+    var hiddenElementsIndicesArray = [IndexPath]() // array for storing show and hide elements
+    var hiddenSectionsIndicesArray = [Int]() // array for storing show and hide sections
     
     
     //MARK: IB Outlets
-    @IBOutlet weak var home_LivingOutlet: UITableView!
+    @IBOutlet weak var home_LivingTableView: UITableView!
     
 
     //MARK: view life cycle
@@ -29,16 +29,19 @@ class Home_LivingVC: UIViewController {
     
     //MARK: Private Functions
     private func initialSetup(){
-    
-        self.home_LivingOutlet.dataSource = self
-        self.home_LivingOutlet.delegate = self
+     
+        //setting datasources and delegates for table view
+        self.home_LivingTableView.dataSource = self
+        self.home_LivingTableView.delegate = self
         
+        
+        //registering xib for table cell
         let xib = UINib(nibName: "SectionsforHome&Living", bundle: nil)
-        home_LivingOutlet.register(xib, forCellReuseIdentifier: "SectionsforHome_LivingID")
+        home_LivingTableView.register(xib, forCellReuseIdentifier: "SectionsforHome_LivingID")
         
-        
+        //registering xib for header section in table view
         let nib = UINib(nibName: "TitlesOfSection", bundle: nil)
-        home_LivingOutlet.register(nib, forHeaderFooterViewReuseIdentifier: "TitlesOfSectionID")
+        home_LivingTableView.register(nib, forHeaderFooterViewReuseIdentifier: "TitlesOfSectionID")
 
     
     }
@@ -48,147 +51,203 @@ class Home_LivingVC: UIViewController {
 //MARK: tableview delegates and datasources
 extension Home_LivingVC : UITableViewDataSource,UITableViewDelegate {
     
-    
+    // return number of sections
     func numberOfSections(in tableView: UITableView) -> Int {
         return 5
     }
     
+    //return number of rows
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        
+        if hiddenSectionsIndicesArray.contains(section){
+            return 0
+        } else {
+      
+            return 5
+        }
     }
     
+    //returning table cell
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "SectionsforHome_LivingID", for: indexPath) as! SectionsforHome_Living
         
-        cell.collectionofBrands.dataSource = self
-        cell.collectionofBrands.delegate = self
-
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "SectionsforHome_LivingID", for: indexPath) as? SectionsforHome_Living else {fatalError("Not Found")}
+        
+        //setting datasources and delegates for collection view
+        cell.home_LivingCollectionView.dataSource = self
+        cell.home_LivingCollectionView.delegate = self
+        
+        //registering xib for collection view cell
         let nib = UINib(nibName: "VarietiesofHome_Living", bundle: nil)
-        cell.collectionofBrands.register(nib, forCellWithReuseIdentifier: "VarietiesofHome_LivingID")
+        cell.home_LivingCollectionView.register(nib, forCellWithReuseIdentifier: "VarietiesofHome_LivingID")
         
         //MARK: IB Action of masking button
-        
         cell.maskButtonOutlet.addTarget(self, action: #selector(maskingAction), for: .touchUpInside)
        
-        if hiddinElements.contains(indexPath){
+        if hiddenElementsIndicesArray.contains(indexPath){
             
             cell.maskButtonOutlet.isSelected = true
-        }
-        else{
+            
+        }else {
 
             cell.maskButtonOutlet.isSelected = false
 
         }
+        
         return cell
         
     }
     
+    //returning height of row
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         
-        if hiddinElements.contains(indexPath){
+        if hiddenElementsIndicesArray.contains(indexPath){
             
                 return 30
-            }
             
-        else{
+            } else {
             
-            return 125
+                return 125
         }
     }
     
+    //returning height of header section
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return 40
     }
     
+    //returning the titile of header section
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         
-        let header = tableView.dequeueReusableHeaderFooterView(withIdentifier: "TitlesOfSectionID")
-        return header
+        guard let header = tableView.dequeueReusableHeaderFooterView(withIdentifier: "TitlesOfSectionID") as? TitlesOfSection else { return nil}
+        
+        header.maskingSectionButtonOutlet.addTarget(self, action: #selector(maskingSectionButtonAction), for: .touchUpInside)
+        
+        header.maskingSectionButtonOutlet.tag = section
+        
+        if hiddenSectionsIndicesArray.contains(section){
+            
+            header.maskingSectionButtonOutlet.isSelected = true
+            
+        } else {
+            
+            header.maskingSectionButtonOutlet.isSelected = false
+
+        }
+        
+       return header
         
     }
-    //function of masking button
+    
+    //function of masking elements button
     func maskingAction (button : UIButton){
         
-        let cell = UIView.getSuperView(givenObject : button, designatedSuperView : .UITableViewCell) as! SectionsforHome_Living
-        
+        guard let cell = button.tableViewCell as? SectionsforHome_Living else { return }
         
         if button.isSelected {
-        
-            hiddinElements.remove(at: hiddinElements.index(of:(home_LivingOutlet.indexPath(for: cell)!))!)
-
-            button.isSelected = false
-        }
-
-        else{
             
-          button.isSelected = true
+            hiddenElementsIndicesArray = hiddenElementsIndicesArray.filter(){ (index: IndexPath) -> Bool in
+            return index != home_LivingTableView.indexPath(for: cell)
+            }
+        
+            button.isSelected = false
+            
+        } else {
+            
+            hiddenElementsIndicesArray.append(home_LivingTableView.indexPath(for: cell)!)
+            
+            button.isSelected = true
         }
-        home_LivingOutlet.reloadRows(at: [home_LivingOutlet.indexPath(for: cell)!] , with: .fade )
+        
+        home_LivingTableView.reloadRows(at: [home_LivingTableView.indexPath(for: cell)!] , with: .fade )
       
         }
+    //function od masking sections
+    func maskingSectionButtonAction(button : UIButton) {
+   
+        if button.isSelected{
+            
+            button.isSelected = false
+            hiddenSectionsIndicesArray = hiddenSectionsIndicesArray.filter(){$0 != button.tag}
+            
+        }else{
+            
+            button.isSelected = true
+            hiddenSectionsIndicesArray.append(button.tag)
+            
+        }
+        
+        home_LivingTableView.reloadSections([button.tag], with: .fade)
+       
+       }
+    
     }
     
 
-    
+
 
 // MARK: collection view datasources and delegates
 extension Home_LivingVC: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
+    //returning number of items in a particular section
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return 30
-        
     }
     
+    //returning the cell of collection view
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "VarietiesofHome_LivingID", for: indexPath) as? VarietiesofHome_Living else {fatalError("Not Found")
         }
-                cell.favouritesButtonOutlet.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
-        
+                //MARK: IB Action of favourites button
+                cell.favouritesButtonOutlet.addTarget(self, action: #selector(favouritesButtonAction), for: .touchUpInside)
                 return cell
      }
     
+    // push the image on other view while selecting on it
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
         
-        let popUpImagePage = self.storyboard?.instantiateViewController(withIdentifier: "PopupImageVCID") as! PopupImageVC
-        let  cell = collectionView.cellForItem(at: indexPath) as! VarietiesofHome_Living
+        guard let popUpImagePage = self.storyboard?.instantiateViewController(withIdentifier: "PopupImageVCID") as? PopupImageVC else { return }
         
-        popUpImagePage.image = cell.brandVarietiesImages.backgroundColor!
+        guard let  cell = collectionView.cellForItem(at: indexPath) as? VarietiesofHome_Living else { return }
         
-        UIView.animate(withDuration: 0.33, animations: {
+        popUpImagePage.image = cell.varietiesImages.image
         
-        self.navigationController!.pushViewController(popUpImagePage, animated: true)
+        UIView.animate(withDuration: 0.5, animations: {
+        
+        self.navigationController!.pushViewController(popUpImagePage, animated: false)
         UIView.setAnimationTransition(.curlUp, for: self.navigationController!.view!, cache: false)
         
         })
     }
     
-    
-    func buttonAction(button : UIButton) {
+    //function of favourites button
+    func favouritesButtonAction(button : UIButton) {
         
         //finding indexpath of table cell
-        let tableCell = UIView.getSuperView(givenObject : button, designatedSuperView : .UITableViewCell) as! SectionsforHome_Living
-        let tableIndexpath = home_LivingOutlet.indexPath(for: tableCell)
+        guard let tableCell = button.tableViewCell as? SectionsforHome_Living else { return }
+        let tableIndexpath = home_LivingTableView.indexPath(for: tableCell)
         
         //finding indexpath of collection cell
-        let collectionCell = UIView.getSuperView(givenObject : button, designatedSuperView : .UICollectionViewCell) as! VarietiesofHome_Living
-        let collectionIndexpath = tableCell.collectionofBrands.indexPath(for: collectionCell)
+        guard let collectionCell = button.collectionViewCell as? VarietiesofHome_Living else { return }
+        let collectionIndexpath = tableCell.home_LivingCollectionView.indexPath(for: collectionCell)
         
         if button.isSelected == false{
            
-            favouritesArray.append([tableIndexpath!,collectionIndexpath!])
-             print(favouritesArray)
+            favouritesIndicesArray.append([tableIndexpath!,collectionIndexpath!])
+             print(favouritesIndicesArray)
             
             button.isSelected = true
-            button.isSelected = false
+          
         }
         else {
             
-            favouritesArray.remove(at: favouritesArray.index(where: { (a : [IndexPath]) -> Bool in
-             return a == [tableIndexpath!,collectionIndexpath!]
-               })!)
-             button.isSelected = false
+            
+            favouritesIndicesArray = favouritesIndicesArray.filter(){ (indices: [IndexPath]) -> Bool in
+                return indices != [tableIndexpath!,collectionIndexpath!]
+
+            }
+            button.isSelected = false
             
         }
      }

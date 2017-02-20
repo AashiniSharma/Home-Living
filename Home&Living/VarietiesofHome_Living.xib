@@ -18,7 +18,7 @@
                 <rect key="frame" x="0.0" y="0.0" width="100" height="86"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="1aY-yM-F5H">
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="hl" translatesAutoresizingMaskIntoConstraints="NO" id="1aY-yM-F5H">
                         <rect key="frame" x="0.0" y="15" width="100" height="50"/>
                         <color key="backgroundColor" red="0.87795436920000003" green="0.9979557966" blue="0.9823973372" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -53,10 +53,13 @@
             </constraints>
             <size key="customSize" width="243" height="86"/>
             <connections>
-                <outlet property="brandVarietiesImages" destination="1aY-yM-F5H" id="9Ds-mG-KKc"/>
                 <outlet property="favouritesButtonOutlet" destination="kWG-tO-8uv" id="FpN-Hz-rly"/>
+                <outlet property="varietiesImages" destination="1aY-yM-F5H" id="hre-Cd-QGK"/>
             </connections>
             <point key="canvasLocation" x="40" y="63"/>
         </collectionViewCell>
     </objects>
+    <resources>
+        <image name="hl" width="225" height="225"/>
+    </resources>
 </document>

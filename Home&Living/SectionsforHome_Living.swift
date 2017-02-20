@@ -11,7 +11,7 @@ import UIKit
 class SectionsforHome_Living: UITableViewCell {
     
    //MARK : IB Outlets
-    @IBOutlet weak var collectionofBrands: UICollectionView!
+    @IBOutlet weak var home_LivingCollectionView: UICollectionView!
     @IBOutlet weak var brandsLabel: UILabel!
     @IBOutlet weak var maskButtonOutlet: UIButton!
     

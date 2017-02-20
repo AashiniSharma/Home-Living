@@ -13,7 +13,7 @@ class VarietiesofHome_Living: UICollectionViewCell {
     
      //MARK: IB Outlets
     @IBOutlet weak var favouritesButtonOutlet: UIButton!
-    @IBOutlet weak var brandVarietiesImages: UIImageView!
+    @IBOutlet weak var varietiesImages: UIImageView!
     
         override func awakeFromNib() {
         super.awakeFromNib()

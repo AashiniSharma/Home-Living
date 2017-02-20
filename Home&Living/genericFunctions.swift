@@ -11,30 +11,29 @@ import UIKit
 
 extension UIView {
     
-    enum viewType{
-    case UICollectionViewCell,UITableViewCell
-    }
     
-    static func getSuperView(givenObject : Any, designatedSuperView : viewType) -> Any{
+    var tableViewCell : UITableViewCell?{
         
-        var cell = givenObject
-        switch(designatedSuperView){
-        case .UICollectionViewCell :
+        var cell = self
+        while !(cell is UITableViewCell){
             
-            while !(cell is UICollectionViewCell){
+            guard let s = cell.superview else { return nil }
+            cell = s
             
-            cell = (cell as AnyObject).superview as Any
-            }
-            
-        case .UITableViewCell :
-            
-            while !(cell is UITableViewCell){
-                
-                cell = (cell as AnyObject).superview as Any
-            }
-  
-        }
-    return cell
-    
+       }
+        return cell as? UITableViewCell
     }
+    
+    var collectionViewCell : UICollectionViewCell?{
+        
+        var cell = self
+        while !(cell is UICollectionViewCell){
+            
+            guard let s = cell.superview else{ return nil }
+            cell = s
+            
+        }
+        return cell as? UICollectionViewCell
+    }
+
 }

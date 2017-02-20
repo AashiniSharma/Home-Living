@@ -22,16 +22,39 @@
                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gr8-No-ROH">
+                    <rect key="frame" x="267" y="0.0" width="108" height="20"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="108" id="axC-IZ-gzU"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                    <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <state key="normal" title="Mask">
+                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </state>
+                    <state key="selected" title="Unmask">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </state>
+                </button>
             </subviews>
             <accessibility key="accessibilityConfiguration" identifier="TitlesOfSectionID"/>
             <constraints>
                 <constraint firstAttribute="bottom" secondItem="okV-7v-o5R" secondAttribute="bottom" id="NaX-h0-xVS"/>
+                <constraint firstAttribute="trailing" secondItem="Gr8-No-ROH" secondAttribute="trailing" id="OwJ-Bk-2jf"/>
                 <constraint firstAttribute="trailing" secondItem="okV-7v-o5R" secondAttribute="trailing" id="Uaf-TG-uzn"/>
                 <constraint firstItem="okV-7v-o5R" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="gsR-1B-RYB"/>
                 <constraint firstItem="okV-7v-o5R" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="ioX-0r-CzW"/>
+                <constraint firstItem="Gr8-No-ROH" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="rJe-4i-xfe"/>
+                <constraint firstAttribute="bottom" secondItem="Gr8-No-ROH" secondAttribute="bottom" id="tc6-0S-asw"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <point key="canvasLocation" x="-10.5" y="-95"/>
+            <connections>
+                <outlet property="maskingSectionButtonOutlet" destination="Gr8-No-ROH" id="U93-V5-I5o"/>
+            </connections>
+            <point key="canvasLocation" x="-27.5" y="-87"/>
         </view>
     </objects>
 </document>
