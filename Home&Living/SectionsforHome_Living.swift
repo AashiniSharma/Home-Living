@@ -9,21 +9,17 @@
 import UIKit
 
 class SectionsforHome_Living: UITableViewCell {
-
+    
+   //MARK : IB Outlets
     @IBOutlet weak var collectionofBrands: UICollectionView!
     @IBOutlet weak var brandsLabel: UILabel!
-    
-    
     @IBOutlet weak var maskButtonOutlet: UIButton!
-    override func awakeFromNib() {
+    
+    
+        override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
     }
 
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
 
 }

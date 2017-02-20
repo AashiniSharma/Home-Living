@@ -9,13 +9,13 @@
 import UIKit
 
 class VarietiesofHome_Living: UICollectionViewCell {
-
+    
+    
+     //MARK: IB Outlets
     @IBOutlet weak var favouritesButtonOutlet: UIButton!
     @IBOutlet weak var brandVarietiesImages: UIImageView!
     
-    
-    
-    override func awakeFromNib() {
+        override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
     }

@@ -12,7 +12,7 @@ import UIKit
 extension UIView {
     
     enum viewType{
-        case UICollectionViewCell,UITableViewCell
+    case UICollectionViewCell,UITableViewCell
     }
     
     static func getSuperView(givenObject : Any, designatedSuperView : viewType) -> Any{
@@ -32,12 +32,9 @@ extension UIView {
                 
                 cell = (cell as AnyObject).superview as Any
             }
-
-        default : print("Sorrry !")
-            
+  
         }
-        return cell
-        
-    }
+    return cell
     
+    }
 }

@@ -9,45 +9,29 @@
 import UIKit
 
 class PopupImageVC: UIViewController {
-
+    
+    
+    //MARK : properties
     var image : UIColor!
-    
-    
-    
+    //MARK: IB OUtlets
     @IBOutlet weak var popUpImagesOutlet: UIImageView!
+    
+    //MARK: view life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
     }
-
     override func viewWillLayoutSubviews() {
 
     popUpImagesOutlet.backgroundColor = image
-      
-    
-    
+   
+        
     }
     override func viewWillDisappear(_ animated: Bool) {
         
         UIView.animate(withDuration: 0.33, animations: {
-            
-            UIView.setAnimationCurve(.easeInOut)
-            
-            
-            UIView.setAnimationTransition(.curlDown, for: self.navigationController!.view!, cache: false) })
-        
-        
+        UIView.setAnimationTransition(.curlDown, for: self.navigationController!.view!, cache: false) })
         
     }
-    
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
-
-
 
 }

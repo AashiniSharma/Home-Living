@@ -2,35 +2,45 @@
 import UIKit
 
 class Home_LivingVC: UIViewController {
-    //MARK: IB Outlets
-    @IBOutlet weak var home_LivingOutlet: UITableView!
+  
     
+    //MARK: Properties
     var favouritesArray = [[IndexPath]]()
     
     var hiddinElements = [IndexPath]()
     
     
- 
+    //MARK: IB Outlets
+    @IBOutlet weak var home_LivingOutlet: UITableView!
     
+
     //MARK: view life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        initialSetup()
+    }
+
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        
+    }
+    
+    
+    //MARK: Private Functions
+    private func initialSetup(){
+    
         self.home_LivingOutlet.dataSource = self
         self.home_LivingOutlet.delegate = self
         
         let xib = UINib(nibName: "SectionsforHome&Living", bundle: nil)
         home_LivingOutlet.register(xib, forCellReuseIdentifier: "SectionsforHome_LivingID")
         
-
+        
         let nib = UINib(nibName: "TitlesOfSection", bundle: nil)
         home_LivingOutlet.register(nib, forHeaderFooterViewReuseIdentifier: "TitlesOfSectionID")
-    
-    }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        
+    
     }
   
 }
@@ -56,26 +66,36 @@ extension Home_LivingVC : UITableViewDataSource,UITableViewDelegate {
         let nib = UINib(nibName: "VarietiesofHome_Living", bundle: nil)
         cell.collectionofBrands.register(nib, forCellWithReuseIdentifier: "VarietiesofHome_LivingID")
         
+        //MARK: IB Action of masking button
+        
         cell.maskButtonOutlet.addTarget(self, action: #selector(maskingAction), for: .touchUpInside)
+       
         if hiddinElements.contains(indexPath){
+            
             cell.maskButtonOutlet.isSelected = true
         }
         else{
+
             cell.maskButtonOutlet.isSelected = false
 
         }
         return cell
         
     }
+    
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         
         if hiddinElements.contains(indexPath){
-            return 30
+            
+                return 30
             }
+            
         else{
-        return 125
+            
+            return 125
         }
     }
+    
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return 40
     }
@@ -86,7 +106,7 @@ extension Home_LivingVC : UITableViewDataSource,UITableViewDelegate {
         return header
         
     }
-    
+    //function of masking button
     func maskingAction (button : UIButton){
         
         let cell = UIView.getSuperView(givenObject : button, designatedSuperView : .UITableViewCell) as! SectionsforHome_Living
@@ -95,25 +115,14 @@ extension Home_LivingVC : UITableViewDataSource,UITableViewDelegate {
         if button.isSelected {
         
             hiddinElements.remove(at: hiddinElements.index(of:(home_LivingOutlet.indexPath(for: cell)!))!)
-//            UIView.animate(withDuration: 1.0, animations: {
-//              
-//                UIView.setAnimationTransition(.flipFromRight, for: cell, cache: false)
-//              })
-//
+
             button.isSelected = false
-                       }
+        }
 
         else{
             
-           hiddinElements.append(home_LivingOutlet.indexPath(for: cell)!)
-//            UIView.animate(withDuration: 1.0, animations: {
-//           
-//            UIView.setAnimationTransition(.flipFromLeft, for: cell, cache: false)
-//                
-//            })
-//
-            button.isSelected = true
-            }
+          button.isSelected = true
+        }
         home_LivingOutlet.reloadRows(at: [home_LivingOutlet.indexPath(for: cell)!] , with: .fade )
       
         }
@@ -149,8 +158,6 @@ extension Home_LivingVC: UICollectionViewDelegate, UICollectionViewDataSource, U
         
         UIView.animate(withDuration: 0.33, animations: {
         
-        UIView.setAnimationCurve(.easeInOut)
-        
         self.navigationController!.pushViewController(popUpImagePage, animated: true)
         UIView.setAnimationTransition(.curlUp, for: self.navigationController!.view!, cache: false)
         
@@ -160,14 +167,13 @@ extension Home_LivingVC: UICollectionViewDelegate, UICollectionViewDataSource, U
     
     func buttonAction(button : UIButton) {
         
-        
+        //finding indexpath of table cell
         let tableCell = UIView.getSuperView(givenObject : button, designatedSuperView : .UITableViewCell) as! SectionsforHome_Living
         let tableIndexpath = home_LivingOutlet.indexPath(for: tableCell)
         
+        //finding indexpath of collection cell
         let collectionCell = UIView.getSuperView(givenObject : button, designatedSuperView : .UICollectionViewCell) as! VarietiesofHome_Living
-        
         let collectionIndexpath = tableCell.collectionofBrands.indexPath(for: collectionCell)
-        
         
         if button.isSelected == false{
            
@@ -175,7 +181,7 @@ extension Home_LivingVC: UICollectionViewDelegate, UICollectionViewDataSource, U
              print(favouritesArray)
             
             button.isSelected = true
-//           button.isSelected = false
+            button.isSelected = false
         }
         else {
             
@@ -186,7 +192,6 @@ extension Home_LivingVC: UICollectionViewDelegate, UICollectionViewDataSource, U
             
         }
      }
-
 }
 
     
