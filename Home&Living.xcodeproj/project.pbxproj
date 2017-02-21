@@ -17,9 +17,11 @@
 		0C488CE21E55918700DC7EB1 /* VarietiesofHome_Living.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C488CE01E55918700DC7EB1 /* VarietiesofHome_Living.xib */; };
 		0C488CE41E55A8BD00DC7EB1 /* TitlesOfSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C488CE31E55A8BD00DC7EB1 /* TitlesOfSection.swift */; };
 		0C488CE61E55A8E300DC7EB1 /* TitlesOfSection.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C488CE51E55A8E300DC7EB1 /* TitlesOfSection.xib */; };
+		0CAF3B6A1E5B3AB900A5BA3C /* InformationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CAF3B691E5B3AB900A5BA3C /* InformationModel.swift */; };
 		0CBB6DE61E58083E008B1B36 /* genericFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CBB6DE51E58083E008B1B36 /* genericFunctions.swift */; };
 		0CBB6DEA1E582481008B1B36 /* PopupImageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CBB6DE91E582481008B1B36 /* PopupImageVC.swift */; };
 		0CBB6DEC1E58515E008B1B36 /* SectionsforHome_Living.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CBB6DEB1E58515E008B1B36 /* SectionsforHome_Living.swift */; };
+		4ACC2846074C2175467B5D0C /* Pods_Home_Living.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DCD7D16D48A343AB75779EC /* Pods_Home_Living.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,9 +37,13 @@
 		0C488CE01E55918700DC7EB1 /* VarietiesofHome_Living.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VarietiesofHome_Living.xib; sourceTree = "<group>"; };
 		0C488CE31E55A8BD00DC7EB1 /* TitlesOfSection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TitlesOfSection.swift; sourceTree = "<group>"; };
 		0C488CE51E55A8E300DC7EB1 /* TitlesOfSection.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TitlesOfSection.xib; sourceTree = "<group>"; };
+		0CAF3B691E5B3AB900A5BA3C /* InformationModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InformationModel.swift; sourceTree = "<group>"; };
 		0CBB6DE51E58083E008B1B36 /* genericFunctions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = genericFunctions.swift; sourceTree = "<group>"; };
 		0CBB6DE91E582481008B1B36 /* PopupImageVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopupImageVC.swift; sourceTree = "<group>"; };
 		0CBB6DEB1E58515E008B1B36 /* SectionsforHome_Living.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SectionsforHome_Living.swift; sourceTree = "<group>"; };
+		1DCD7D16D48A343AB75779EC /* Pods_Home_Living.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Home_Living.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		429BD88CB15A62944CFC4650 /* Pods-Home&Living.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Home&Living.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Home&Living/Pods-Home&Living.debug.xcconfig"; sourceTree = "<group>"; };
+		E97BEB3C148F3BBA528F3F51 /* Pods-Home&Living.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Home&Living.release.xcconfig"; path = "Pods/Target Support Files/Pods-Home&Living/Pods-Home&Living.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +51,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4ACC2846074C2175467B5D0C /* Pods_Home_Living.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,6 +63,8 @@
 			children = (
 				0C488CC21E557DD600DC7EB1 /* Home&Living */,
 				0C488CC11E557DD600DC7EB1 /* Products */,
+				10366055AB0E5670E122319E /* Pods */,
+				D35B9E286608D9D817B181A6 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -72,6 +81,7 @@
 			children = (
 				0C488CC31E557DD600DC7EB1 /* AppDelegate.swift */,
 				0C488CD51E557EDC00DC7EB1 /* Home&LivingVC.swift */,
+				0CAF3B691E5B3AB900A5BA3C /* InformationModel.swift */,
 				0CBB6DE91E582481008B1B36 /* PopupImageVC.swift */,
 				0C488CC71E557DD600DC7EB1 /* Main.storyboard */,
 				0C488CDF1E55918700DC7EB1 /* VarietiesofHome_Living.swift */,
@@ -88,6 +98,23 @@
 			path = "Home&Living";
 			sourceTree = "<group>";
 		};
+		10366055AB0E5670E122319E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				429BD88CB15A62944CFC4650 /* Pods-Home&Living.debug.xcconfig */,
+				E97BEB3C148F3BBA528F3F51 /* Pods-Home&Living.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		D35B9E286608D9D817B181A6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1DCD7D16D48A343AB75779EC /* Pods_Home_Living.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -95,9 +122,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0C488CD21E557DD600DC7EB1 /* Build configuration list for PBXNativeTarget "Home&Living" */;
 			buildPhases = (
+				62B6D7964DE2455CAF677677 /* [CP] Check Pods Manifest.lock */,
 				0C488CBC1E557DD600DC7EB1 /* Sources */,
 				0C488CBD1E557DD600DC7EB1 /* Frameworks */,
 				0C488CBE1E557DD600DC7EB1 /* Resources */,
+				47B5699B6AF1381CBFBD7BB5 /* [CP] Embed Pods Frameworks */,
+				82BA7C8DB26AE8123556C5F7 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -158,6 +188,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		47B5699B6AF1381CBFBD7BB5 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Home&Living/Pods-Home&Living-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		62B6D7964DE2455CAF677677 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		82BA7C8DB26AE8123556C5F7 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Home&Living/Pods-Home&Living-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		0C488CBC1E557DD600DC7EB1 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -167,6 +245,7 @@
 				0C488CE11E55918700DC7EB1 /* VarietiesofHome_Living.swift in Sources */,
 				0C488CE41E55A8BD00DC7EB1 /* TitlesOfSection.swift in Sources */,
 				0CBB6DEA1E582481008B1B36 /* PopupImageVC.swift in Sources */,
+				0CAF3B6A1E5B3AB900A5BA3C /* InformationModel.swift in Sources */,
 				0C488CD61E557EDC00DC7EB1 /* Home&LivingVC.swift in Sources */,
 				0CBB6DE61E58083E008B1B36 /* genericFunctions.swift in Sources */,
 				0CBB6DEC1E58515E008B1B36 /* SectionsforHome_Living.swift in Sources */,
@@ -290,6 +369,7 @@
 		};
 		0C488CD31E557DD600DC7EB1 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 429BD88CB15A62944CFC4650 /* Pods-Home&Living.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "Home&Living/Info.plist";
@@ -302,6 +382,7 @@
 		};
 		0C488CD41E557DD600DC7EB1 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E97BEB3C148F3BBA528F3F51 /* Pods-Home&Living.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "Home&Living/Info.plist";

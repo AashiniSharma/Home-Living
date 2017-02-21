@@ -1,5 +1,9 @@
 
 import UIKit
+import Alamofire
+import SwiftyJSON
+import AlamofireImage
+
 
 class Home_LivingVC: UIViewController {
   
@@ -8,6 +12,7 @@ class Home_LivingVC: UIViewController {
     var favouritesIndicesArray = [[IndexPath]]() //2D array for storing indexpaths of table view and collection view
     var hiddenElementsIndicesArray = [IndexPath]() // array for storing show and hide elements
     var hiddenSectionsIndicesArray = [Int]() // array for storing show and hide sections
+    var dogPicturesData = [JSON]()
     
     
     //MARK: IB Outlets
@@ -19,6 +24,13 @@ class Home_LivingVC: UIViewController {
         super.viewDidLoad()
         
         initialSetup()
+        fetchData(withQuery: "home decor")
+        
+        
+    }
+    
+    override func viewWillLayoutSubviews() {
+        fetchData(withQuery: "home decor")
     }
 
     override func didReceiveMemoryWarning() {
@@ -45,7 +57,42 @@ class Home_LivingVC: UIViewController {
 
     
     }
-  
+    
+    func fetchData(withQuery query: String) {
+        
+        let URL = "https://pixabay.com/api/"
+        
+        let parameters = ["key" : "4608977-0fba8b8dc6c54482ac299615e",
+                          
+                          "q" : query
+        ]
+        
+        Alamofire.request(URL,
+                          method: .get,
+                          parameters: parameters,
+                          encoding: URLEncoding.default,
+                          headers: nil).responseJSON { (response :DataResponse<Any>) in
+                            
+                            if let value = response.value as? [String:Any] {
+                                
+                                let json = JSON(value)
+                                
+                                self.dogPicturesData = json["hits"].array!
+                                self.home_LivingTableView.reloadData()
+
+                                print(value)
+                                
+                            } else if let error = response.error {
+                                
+                                print(error)
+                            }
+                            
+        }
+        
+        
+    }
+
+    
 }
 
 //MARK: tableview delegates and datasources
@@ -82,6 +129,7 @@ extension Home_LivingVC : UITableViewDataSource,UITableViewDelegate {
         
         //MARK: IB Action of masking button
         cell.maskButtonOutlet.addTarget(self, action: #selector(maskingAction), for: .touchUpInside)
+        
        
         if hiddenElementsIndicesArray.contains(indexPath){
             
@@ -180,9 +228,8 @@ extension Home_LivingVC : UITableViewDataSource,UITableViewDelegate {
        
        }
     
-    }
     
-
+}
 
 
 // MARK: collection view datasources and delegates
@@ -190,7 +237,7 @@ extension Home_LivingVC: UICollectionViewDelegate, UICollectionViewDataSource, U
     
     //returning number of items in a particular section
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 30
+        return dogPicturesData.count
     }
     
     //returning the cell of collection view
@@ -200,6 +247,13 @@ extension Home_LivingVC: UICollectionViewDelegate, UICollectionViewDataSource, U
         }
                 //MARK: IB Action of favourites button
                 cell.favouritesButtonOutlet.addTarget(self, action: #selector(favouritesButtonAction), for: .touchUpInside)
+        
+        
+        let modelData = ImageInfo(withJSON: dogPicturesData[indexPath.row])
+        let url = URL(string: modelData.webformatURL)
+        cell.varietiesImages.af_setImage(withURL: url! )
+        
+
                 return cell
      }
     
