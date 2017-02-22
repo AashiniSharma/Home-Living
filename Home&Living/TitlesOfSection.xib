@@ -53,6 +53,7 @@
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
                 <outlet property="maskingSectionButtonOutlet" destination="Gr8-No-ROH" id="U93-V5-I5o"/>
+                <outlet property="titlesOutlet" destination="okV-7v-o5R" id="D5M-nu-WLM"/>
             </connections>
             <point key="canvasLocation" x="-27.5" y="-87"/>
         </view>

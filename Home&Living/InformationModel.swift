@@ -23,6 +23,7 @@ struct ImageInfo {
     var pageURL : String = ""
     var userImageURL : String = ""
     var webformatURL : String = ""
+    var previewURL   : String = ""
     
     init(withJSON json: JSON) {
         
@@ -37,6 +38,8 @@ struct ImageInfo {
         self.pageURL = json["pageURL"].stringValue
         self.userImageURL = json["userImageURL"].stringValue
         self.webformatURL = json["webformatURL"].stringValue
+        self.previewURL = json["previewURL"].stringValue
+
         
     }
     

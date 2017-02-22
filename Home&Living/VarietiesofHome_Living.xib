@@ -19,14 +19,14 @@
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="hl" translatesAutoresizingMaskIntoConstraints="NO" id="1aY-yM-F5H">
-                        <rect key="frame" x="0.0" y="15" width="100" height="50"/>
+                        <rect key="frame" x="0.0" y="20" width="100" height="50"/>
                         <color key="backgroundColor" red="0.87795436920000003" green="0.9979557966" blue="0.9823973372" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="50" id="gMd-hc-KzJ"/>
                         </constraints>
                     </imageView>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kWG-tO-8uv">
-                        <rect key="frame" x="75" y="65" width="25" height="15"/>
+                        <rect key="frame" x="75" y="70" width="25" height="15"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="25" id="0Uu-ex-5M4"/>
@@ -41,13 +41,25 @@
                             <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         </state>
                     </button>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kra-Qx-Xvd">
+                        <rect key="frame" x="0.0" y="-1" width="100" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="TZH-tq-Gbq"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                 </subviews>
             </view>
             <color key="backgroundColor" red="0.82354817359999999" green="1" blue="0.80731562629999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
+                <constraint firstItem="kra-Qx-Xvd" firstAttribute="trailing" secondItem="1aY-yM-F5H" secondAttribute="trailing" id="3ae-tA-aBm"/>
+                <constraint firstItem="kra-Qx-Xvd" firstAttribute="leading" secondItem="1aY-yM-F5H" secondAttribute="leading" id="BqD-qn-vfD"/>
                 <constraint firstItem="kWG-tO-8uv" firstAttribute="top" secondItem="1aY-yM-F5H" secondAttribute="bottom" id="MAD-tz-MSB"/>
                 <constraint firstAttribute="trailing" secondItem="1aY-yM-F5H" secondAttribute="trailing" id="NsI-Ra-s9J"/>
-                <constraint firstItem="1aY-yM-F5H" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="15" id="Wda-da-u9A"/>
+                <constraint firstItem="1aY-yM-F5H" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="20" id="Wda-da-u9A"/>
+                <constraint firstItem="kra-Qx-Xvd" firstAttribute="bottom" secondItem="1aY-yM-F5H" secondAttribute="top" id="gM8-Jj-duh"/>
                 <constraint firstItem="1aY-yM-F5H" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="pzX-ho-WoX"/>
                 <constraint firstItem="kWG-tO-8uv" firstAttribute="trailing" secondItem="1aY-yM-F5H" secondAttribute="trailing" id="uCk-J2-LRR"/>
             </constraints>
@@ -55,6 +67,7 @@
             <connections>
                 <outlet property="favouritesButtonOutlet" destination="kWG-tO-8uv" id="FpN-Hz-rly"/>
                 <outlet property="varietiesImages" destination="1aY-yM-F5H" id="hre-Cd-QGK"/>
+                <outlet property="varietyLabel" destination="kra-Qx-Xvd" id="6GV-sq-H5S"/>
             </connections>
             <point key="canvasLocation" x="40" y="63"/>
         </collectionViewCell>

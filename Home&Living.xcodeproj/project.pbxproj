@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0C0083501E5C5BC800692114 /* Network Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C00834F1E5C5BC800692114 /* Network Controller.swift */; };
+		0C0083521E5C5C7E00692114 /* Web Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C0083511E5C5C7E00692114 /* Web Controller.swift */; };
 		0C488CC41E557DD600DC7EB1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C488CC31E557DD600DC7EB1 /* AppDelegate.swift */; };
 		0C488CC91E557DD600DC7EB1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0C488CC71E557DD600DC7EB1 /* Main.storyboard */; };
 		0C488CCB1E557DD600DC7EB1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0C488CCA1E557DD600DC7EB1 /* Assets.xcassets */; };
@@ -21,10 +23,13 @@
 		0CBB6DE61E58083E008B1B36 /* genericFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CBB6DE51E58083E008B1B36 /* genericFunctions.swift */; };
 		0CBB6DEA1E582481008B1B36 /* PopupImageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CBB6DE91E582481008B1B36 /* PopupImageVC.swift */; };
 		0CBB6DEC1E58515E008B1B36 /* SectionsforHome_Living.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CBB6DEB1E58515E008B1B36 /* SectionsforHome_Living.swift */; };
+		0CE946331E5DD18E00AFB758 /* JsonData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CE946321E5DD18E00AFB758 /* JsonData.swift */; };
 		4ACC2846074C2175467B5D0C /* Pods_Home_Living.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DCD7D16D48A343AB75779EC /* Pods_Home_Living.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0C00834F1E5C5BC800692114 /* Network Controller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Network Controller.swift"; sourceTree = "<group>"; };
+		0C0083511E5C5C7E00692114 /* Web Controller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Web Controller.swift"; sourceTree = "<group>"; };
 		0C488CC01E557DD600DC7EB1 /* Home&Living.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Home&Living.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0C488CC31E557DD600DC7EB1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0C488CC81E557DD600DC7EB1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -41,6 +46,7 @@
 		0CBB6DE51E58083E008B1B36 /* genericFunctions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = genericFunctions.swift; sourceTree = "<group>"; };
 		0CBB6DE91E582481008B1B36 /* PopupImageVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopupImageVC.swift; sourceTree = "<group>"; };
 		0CBB6DEB1E58515E008B1B36 /* SectionsforHome_Living.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SectionsforHome_Living.swift; sourceTree = "<group>"; };
+		0CE946321E5DD18E00AFB758 /* JsonData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JsonData.swift; sourceTree = "<group>"; };
 		1DCD7D16D48A343AB75779EC /* Pods_Home_Living.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Home_Living.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		429BD88CB15A62944CFC4650 /* Pods-Home&Living.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Home&Living.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Home&Living/Pods-Home&Living.debug.xcconfig"; sourceTree = "<group>"; };
 		E97BEB3C148F3BBA528F3F51 /* Pods-Home&Living.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Home&Living.release.xcconfig"; path = "Pods/Target Support Files/Pods-Home&Living/Pods-Home&Living.release.xcconfig"; sourceTree = "<group>"; };
@@ -81,9 +87,12 @@
 			children = (
 				0C488CC31E557DD600DC7EB1 /* AppDelegate.swift */,
 				0C488CD51E557EDC00DC7EB1 /* Home&LivingVC.swift */,
-				0CAF3B691E5B3AB900A5BA3C /* InformationModel.swift */,
+				0CE946321E5DD18E00AFB758 /* JsonData.swift */,
 				0CBB6DE91E582481008B1B36 /* PopupImageVC.swift */,
 				0C488CC71E557DD600DC7EB1 /* Main.storyboard */,
+				0CAF3B691E5B3AB900A5BA3C /* InformationModel.swift */,
+				0C00834F1E5C5BC800692114 /* Network Controller.swift */,
+				0C0083511E5C5C7E00692114 /* Web Controller.swift */,
 				0C488CDF1E55918700DC7EB1 /* VarietiesofHome_Living.swift */,
 				0C488CE01E55918700DC7EB1 /* VarietiesofHome_Living.xib */,
 				0CBB6DEB1E58515E008B1B36 /* SectionsforHome_Living.swift */,
@@ -242,8 +251,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				0C488CC41E557DD600DC7EB1 /* AppDelegate.swift in Sources */,
+				0CE946331E5DD18E00AFB758 /* JsonData.swift in Sources */,
 				0C488CE11E55918700DC7EB1 /* VarietiesofHome_Living.swift in Sources */,
 				0C488CE41E55A8BD00DC7EB1 /* TitlesOfSection.swift in Sources */,
+				0C0083521E5C5C7E00692114 /* Web Controller.swift in Sources */,
+				0C0083501E5C5BC800692114 /* Network Controller.swift in Sources */,
 				0CBB6DEA1E582481008B1B36 /* PopupImageVC.swift in Sources */,
 				0CAF3B6A1E5B3AB900A5BA3C /* InformationModel.swift in Sources */,
 				0C488CD61E557EDC00DC7EB1 /* Home&LivingVC.swift in Sources */,
@@ -292,6 +304,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -342,6 +355,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;

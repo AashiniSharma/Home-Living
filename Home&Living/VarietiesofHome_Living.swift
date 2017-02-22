@@ -10,14 +10,21 @@ import UIKit
 
 class VarietiesofHome_Living: UICollectionViewCell {
     
-    
+    var cellData : ImageInfo!
      //MARK: IB Outlets
     @IBOutlet weak var favouritesButtonOutlet: UIButton!
     @IBOutlet weak var varietiesImages: UIImageView!
+    @IBOutlet weak var varietyLabel: UILabel!
     
         override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+    }
+    
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        varietiesImages.image = nil
+        favouritesButtonOutlet.isSelected = false
     }
 
 }

@@ -10,6 +10,9 @@ import UIKit
 
 class SectionsforHome_Living: UITableViewCell {
     
+    
+    var tableIndexpath = IndexPath()
+    
    //MARK : IB Outlets
     @IBOutlet weak var home_LivingCollectionView: UICollectionView!
     @IBOutlet weak var brandsLabel: UILabel!
@@ -21,5 +24,8 @@ class SectionsforHome_Living: UITableViewCell {
         // Initialization code
     }
 
+    override func prepareForReuse() {
+        home_LivingCollectionView.reloadData()
+    }
 
 }

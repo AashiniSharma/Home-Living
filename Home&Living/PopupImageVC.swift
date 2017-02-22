@@ -12,7 +12,7 @@ class PopupImageVC: UIViewController {
     
     
     //MARK : properties
-    var image : UIImage!
+    var imageUrl : URL!
     //MARK: IB OUtlets
     @IBOutlet weak var popUpImagesOutlet: UIImageView!
     
@@ -27,16 +27,12 @@ class PopupImageVC: UIViewController {
     
     //setting the background color of this view with the image of main view cells
     override func viewWillLayoutSubviews() {
+        
+        popUpImagesOutlet.animationDuration = 2.0
 
-    popUpImagesOutlet.image = image
+       popUpImagesOutlet.af_setImage(withURL: imageUrl)
+        
        
-    }
-    
-    override func viewWillDisappear(_ animated: Bool) {
-        
-        UIView.animate(withDuration: 1, animations: {
-        UIView.setAnimationTransition(.curlDown, for: self.navigationController!.view!, cache: false) })
-        
     }
     
     func viewDidDragged(panGesture : UIPanGestureRecognizer){
