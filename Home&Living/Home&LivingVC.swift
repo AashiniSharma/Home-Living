@@ -68,7 +68,7 @@ class Home_LivingVC: UIViewController {
                                                 
             self.home_LivingTableView.reloadData()
                                                 
-        }) { (error : Error) in
+        },failure:  { (error : Error) in
             
             let alert = UIAlertController(title: "Alert", message: "No Internet Connection", preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "Continue", style: .default, handler: nil))
@@ -76,7 +76,7 @@ class Home_LivingVC: UIViewController {
             self.present(alert, animated: true, completion: nil)
             
             print(error)
-                }
+                })
                 
                     count += 1
             }

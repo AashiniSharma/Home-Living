@@ -47,7 +47,7 @@ class JsonData {
                         
                     ],
                     [
-                        "Sub Category" : "Sowpieces"
+                        "Sub Category" : "Kitchen"
                         
                     ],
                     [
@@ -66,11 +66,11 @@ class JsonData {
                 
                 "Value" : [
                     [
-                        "Sub Category" : "Bedsheets"
+                        "Sub Category" : "Tables"
                         
                     ],
                     [
-                        "Sub Category" : "Bedding Sets"
+                        "Sub Category" : "Chairs"
                         
                     ],
                     [
@@ -78,7 +78,7 @@ class JsonData {
                         
                     ],
                     [
-                        "Sub Category" : "Pillow Covers"
+                        "Sub Category" : "Couch"
                         
                     ]
                 ]
