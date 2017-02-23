@@ -106,7 +106,7 @@
                     <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <subviews>
-                        <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hy3-Bm-Hok">
+                        <visualEffectView opaque="NO" contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="hy3-Bm-Hok">
                             <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="VUJ-85-VFw">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
@@ -116,7 +116,7 @@
                                         <rect key="frame" x="115" y="27" width="144" height="21"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -133,6 +133,7 @@
                                     </button>
                                 </subviews>
                             </view>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             <blurEffect style="light"/>
                         </visualEffectView>
                     </subviews>

@@ -21,16 +21,12 @@ class PopupImageVC: UIViewController {
     @IBOutlet weak var imageDetailsLabel: UILabel!
     @IBOutlet weak var visualEffectView: UIVisualEffectView!
     @IBOutlet var extraView: UIView!
+    
     //MARK: view life cycle
-    
-   
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-       
-        
-//        extraView.layer.cornerRadius = 5
+        //extraView.layer.cornerRadius = 5
         self.extraView.addSubview(visualEffectView)
         effect = visualEffectView.effect
         visualEffectView.effect = nil
@@ -48,23 +44,20 @@ class PopupImageVC: UIViewController {
         popUpImagesOutlet.animationDuration = 2.0
         popUpImagesOutlet.af_setImage(withURL: imageUrl)
        
-      
-        
-       
     }
     
     @IBAction func additionButton(_ sender: UIButton) {
         
         animateIn()
+        
     }
     @IBAction func doneButtonInView(_ sender: UIButton) {
         
         animateOut()
         
-        
     }
     
-    
+    //funtion of adding subview with blur effect
     func animateIn(){
         
         self.view.addSubview(extraView)
@@ -76,10 +69,10 @@ class PopupImageVC: UIViewController {
             self.extraView.alpha = 1
             self.extraView.transform = CGAffineTransform.identity
 
-        
         }
     }
     
+    //function of removing subview with blur effect
     func animateOut(){
         
         UIView.animate(withDuration: 0.3, animations: {
@@ -88,14 +81,11 @@ class PopupImageVC: UIViewController {
             self.visualEffectView.effect = nil
             self.extraView.removeFromSuperview()
             
-
-            
         })
         
     }
     
-    
-   
+      
     //function of panGesture
     func viewDidDragged(panGesture : UIPanGestureRecognizer){
         
