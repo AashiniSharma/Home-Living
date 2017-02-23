@@ -11,7 +11,7 @@ class Home_LivingVC: UIViewController {
     var hiddenElementsIndicesArray = [IndexPath]()  // array for storing show and hide elements
     var hiddenSectionsIndicesArray = [Int]()        // array for storing show and hide sections
     var picturesData = [[[ImageInfo]]]()            //array for storing images of collection view cell
-    var sectionsLabelData : [String] = ["Kitchen","Home Decor","Curtains"] //array for storing sections label
+    typealias dictionary = [[String:Any]]
    
     
     //MARK: IB Outlets
@@ -50,21 +50,21 @@ class Home_LivingVC: UIViewController {
         
 
     }
-    
+     //function of inserting data
       private func getImage(){
         
         var count = 1
-        for sections in sectionsLabelData{
+        for sections in JsonData.data.indices{
             picturesData.append([])
             
-            for _ in 0...4 {
+            for (index,value) in (JsonData.data[sections]["Value"] as! dictionary).enumerated(){
+                picturesData[sections].append([])
          
-                
-                WebController().fetchDataFromPixabay(withQuery: sectionsLabelData[sections],
+                WebController().fetchDataFromPixabay(withQuery: value["Sub Category"] as! String,
                                              page      : count,
                                              success: { (images : [ImageInfo]) in
                                                 
-            self.picturesData[sections].append(images)
+            self.picturesData[sections][index] = images
                                                 
             self.home_LivingTableView.reloadData()
                                                 
@@ -125,6 +125,10 @@ extension Home_LivingVC : UITableViewDataSource,UITableViewDelegate {
         //MARK: IB Action of masking button
         cell.maskButtonOutlet.addTarget(self, action: #selector(maskingAction), for: .touchUpInside)
         
+        let data = JsonData.data[indexPath.section]["Value"] as! dictionary
+        
+        cell.brandsLabel.text = data[indexPath.row]["Sub Category"] as! String?
+        
         //persistency for masking and unmasking
         if hiddenElementsIndicesArray.contains(indexPath){
             
@@ -177,7 +181,7 @@ extension Home_LivingVC : UITableViewDataSource,UITableViewDelegate {
 
         }
         
-        header.titlesOutlet.text = sectionsLabelData[section]
+        header.titlesOutlet.text = JsonData.data[section]["Category"] as? String
         
        return header
         
@@ -249,14 +253,13 @@ extension Home_LivingVC: UICollectionViewDelegate, UICollectionViewDataSource, U
         //fetching table cell
         let tableCell = collectionView.tableViewCell as! SectionsforHome_Living
         
-        //
+        // storing images in pictures data array
         let data = picturesData[tableCell.tableIndexpath.section][tableCell.tableIndexpath.row][indexPath.row]
         
         if let url = URL(string: data.previewURL) {
             
            cell.varietiesImages.af_setImage(withURL : url)
-        
-        
+            
         }
         
         cell.varietyLabel.text = "\(tableCell.tableIndexpath.section).\(tableCell.tableIndexpath.row).\(indexPath.row)"
@@ -266,7 +269,7 @@ extension Home_LivingVC: UICollectionViewDelegate, UICollectionViewDataSource, U
         }){
             
             cell.favouritesButtonOutlet.isSelected = true
-        }else{
+        } else {
             
             cell.favouritesButtonOutlet.isSelected = false
             
@@ -275,7 +278,7 @@ extension Home_LivingVC: UICollectionViewDelegate, UICollectionViewDataSource, U
            return cell
      }
     
-    // push the image on other view while selecting on it
+    // pushing the image on other view while selecting on it
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
         guard let popUpImagePage = self.storyboard?.instantiateViewController(withIdentifier: "PopupImageVCID") as? PopupImageVC else { return }

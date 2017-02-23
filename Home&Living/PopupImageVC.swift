@@ -19,22 +19,24 @@ class PopupImageVC: UIViewController {
     //MARK: view life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        let panGesture = UIPanGestureRecognizer(target: self, action: #selector(viewDidDragged(panGesture:)))
         
+        //adding panGesture
+        let panGesture = UIPanGestureRecognizer(target: self, action: #selector(viewDidDragged(panGesture:)))
         popUpImagesOutlet.addGestureRecognizer(panGesture)
    
     }
     
     //setting the background color of this view with the image of main view cells
-    override func viewWillLayoutSubviews() {
+    override func viewWillLayoutSubviews(){
+        super.viewWillLayoutSubviews()
         
         popUpImagesOutlet.animationDuration = 2.0
-
-       popUpImagesOutlet.af_setImage(withURL: imageUrl)
+        popUpImagesOutlet.af_setImage(withURL: imageUrl)
         
        
     }
     
+    //function of panGesture
     func viewDidDragged(panGesture : UIPanGestureRecognizer){
         
         
