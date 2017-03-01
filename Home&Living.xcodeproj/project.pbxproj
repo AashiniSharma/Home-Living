@@ -19,6 +19,7 @@
 		0C488CE21E55918700DC7EB1 /* VarietiesofHome_Living.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C488CE01E55918700DC7EB1 /* VarietiesofHome_Living.xib */; };
 		0C488CE41E55A8BD00DC7EB1 /* TitlesOfSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C488CE31E55A8BD00DC7EB1 /* TitlesOfSection.swift */; };
 		0C488CE61E55A8E300DC7EB1 /* TitlesOfSection.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C488CE51E55A8E300DC7EB1 /* TitlesOfSection.xib */; };
+		0C7336BB1E66AB470003B4D1 /* FavouritesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C7336BA1E66AB470003B4D1 /* FavouritesVC.swift */; };
 		0CAF3B6A1E5B3AB900A5BA3C /* InformationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CAF3B691E5B3AB900A5BA3C /* InformationModel.swift */; };
 		0CBB6DE61E58083E008B1B36 /* genericFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CBB6DE51E58083E008B1B36 /* genericFunctions.swift */; };
 		0CBB6DEA1E582481008B1B36 /* PopupImageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CBB6DE91E582481008B1B36 /* PopupImageVC.swift */; };
@@ -42,6 +43,7 @@
 		0C488CE01E55918700DC7EB1 /* VarietiesofHome_Living.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VarietiesofHome_Living.xib; sourceTree = "<group>"; };
 		0C488CE31E55A8BD00DC7EB1 /* TitlesOfSection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TitlesOfSection.swift; sourceTree = "<group>"; };
 		0C488CE51E55A8E300DC7EB1 /* TitlesOfSection.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TitlesOfSection.xib; sourceTree = "<group>"; };
+		0C7336BA1E66AB470003B4D1 /* FavouritesVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavouritesVC.swift; sourceTree = "<group>"; };
 		0CAF3B691E5B3AB900A5BA3C /* InformationModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InformationModel.swift; sourceTree = "<group>"; };
 		0CBB6DE51E58083E008B1B36 /* genericFunctions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = genericFunctions.swift; sourceTree = "<group>"; };
 		0CBB6DE91E582481008B1B36 /* PopupImageVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopupImageVC.swift; sourceTree = "<group>"; };
@@ -90,6 +92,7 @@
 				0CE946321E5DD18E00AFB758 /* JsonData.swift */,
 				0CBB6DE91E582481008B1B36 /* PopupImageVC.swift */,
 				0C488CC71E557DD600DC7EB1 /* Main.storyboard */,
+				0C7336BA1E66AB470003B4D1 /* FavouritesVC.swift */,
 				0CAF3B691E5B3AB900A5BA3C /* InformationModel.swift */,
 				0C00834F1E5C5BC800692114 /* Network Controller.swift */,
 				0C0083511E5C5C7E00692114 /* Web Controller.swift */,
@@ -259,6 +262,7 @@
 				0CBB6DEA1E582481008B1B36 /* PopupImageVC.swift in Sources */,
 				0CAF3B6A1E5B3AB900A5BA3C /* InformationModel.swift in Sources */,
 				0C488CD61E557EDC00DC7EB1 /* Home&LivingVC.swift in Sources */,
+				0C7336BB1E66AB470003B4D1 /* FavouritesVC.swift in Sources */,
 				0CBB6DE61E58083E008B1B36 /* genericFunctions.swift in Sources */,
 				0CBB6DEC1E58515E008B1B36 /* SectionsforHome_Living.swift in Sources */,
 			);

@@ -86,6 +86,22 @@ class Home_LivingVC: UIViewController {
    
     }
     
+    @IBAction func favButtonAction(_ sender: UIButton) {
+        
+        guard let favouritePage = self.storyboard?.instantiateViewController(withIdentifier: "FavouritesVCID") as? FavouritesVC else{ return }
+        
+        for indices in favouritesIndicesArray
+        {
+            let tableIndexPath = indices[0]
+            let collectionIndexPath = indices[1]
+            let data = picturesData[tableIndexPath.section][tableIndexPath.row][collectionIndexPath.row]
+            favouritePage.favImagesArray.append(data)
+            
+        }
+        
+        self.navigationController?.pushViewController(favouritePage, animated: true)
+        
+    }
 }
 
 //MARK: tableview delegates and datasources

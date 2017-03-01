@@ -13,11 +13,10 @@ class PopupImageVC: UIViewController {
     
     //MARK : properties
     var imageUrl : URL!
-    
     var effect : UIVisualEffect!
+    
     //MARK: IB OUtlets
     @IBOutlet weak var popUpImagesOutlet: UIImageView!
-    
     @IBOutlet weak var imageDetailsLabel: UILabel!
     @IBOutlet weak var visualEffectView: UIVisualEffectView!
     @IBOutlet var extraView: UIView!
@@ -85,7 +84,7 @@ class PopupImageVC: UIViewController {
         
     }
     
-      
+    
     //function of panGesture
     func viewDidDragged(panGesture : UIPanGestureRecognizer){
         
